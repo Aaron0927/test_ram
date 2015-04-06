@@ -12,7 +12,7 @@
 typedef struct object {
     bool avaliable;
     time_t timestamp;
-    char *command;
+    char command[1024];
 } Object;
 
 
@@ -36,7 +36,7 @@ typedef struct head {
     bool used;
     int segletnum; //! record the total seglets number of a segment
     int capacity;
-    char *sin_addr;
+    char sin_addr[20];
     int sin_port;
 } Head;
 
@@ -87,7 +87,7 @@ void setSegletNum(Segment *seg);
 int getSegletNum(Segment *seg);
 
 //++++++++++++++++++++++++++++++++++ storage ++++++++++++++++++++++++++++++++++++++++++//
-int persist(Segment *seg);
+int persist(void);
 char  *mkStorage(char *dirname);
 
 //++++++++++++++++++++++++++++++++++ recovery ++++++++++++++++++++++++++++++++++++++++++//
