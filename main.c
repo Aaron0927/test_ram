@@ -550,10 +550,10 @@ int main(void)
 
     //char *buf = (char *)malloc(128);
     //getcwd(buf, 128); //get current directory
-
-    readFile("/home/zhangchengfei/workspace/ramcube/ramcube_config/backup/127.0.0.1.11114/","1.1428304037.ram");
+    appendToSegment("set key1 0 0 12\r\nzhangchengfe\r\n127.0.0.1:11114\r\n");
+    //readFile("/home/zhangchengfei/workspace/ramcube/ramcube_config/backup/127.0.0.1.11114/","1.1428304037.ram");
     //writefile();
-    readfile();
+    //readfile();
     return 0;
 
 
